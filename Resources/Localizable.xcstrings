@@ -1,0 +1,2173 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Advanced…" : {
+
+    },
+    "%arg" : {
+
+    },
+    "%arg cannot contain line breaks or control characters." : {
+
+    },
+    "%arg doc · %arg pg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg doc · %2$arg pg"
+          }
+        }
+      }
+    },
+    "%arg document%arg · %arg page%arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg document%2$arg · %3$arg page%4$arg"
+          }
+        }
+      }
+    },
+    "%arg document(s), %arg page(s)" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg document(s), %2$arg page(s)"
+          }
+        }
+      }
+    },
+    "%arg does not match the required format." : {
+
+    },
+    "%arg dpi" : {
+
+    },
+    "%arg exceeds the page limit." : {
+
+    },
+    "%arg has more than one page." : {
+
+    },
+    "%arg is estimated to exceed the file-size limit." : {
+
+    },
+    "%arg local drafts are nearing expiration. Open TwainBridge to retry, save, or discard." : {
+
+    },
+    "%arg must be a number." : {
+
+    },
+    "%arg must be a whole number." : {
+
+    },
+    "%arg must be an ISO 8601 date and time." : {
+
+    },
+    "%arg must be at least %arg." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg must be at least %2$arg."
+          }
+        }
+      }
+    },
+    "%arg must be no more than %arg." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg must be no more than %2$arg."
+          }
+        }
+      }
+    },
+    "%arg must be true or false." : {
+
+    },
+    "%arg must contain no more than %arg characters." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg must contain no more than %2$arg characters."
+          }
+        }
+      }
+    },
+    "%arg must use YYYY-MM-DD format." : {
+
+    },
+    "%arg pages scanned" : {
+
+    },
+    "%arg percent" : {
+
+    },
+    "%arg pg" : {
+
+    },
+    "%arg · %arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg · %2$arg"
+          }
+        }
+      }
+    },
+    "%arg · %arg · %arg dpi" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg · %2$arg · %3$arg dpi"
+          }
+        }
+      }
+    },
+    "%arg — %arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg — %2$arg"
+          }
+        }
+      }
+    },
+    "%arg — Page %arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg — Page %2$arg"
+          }
+        }
+      }
+    },
+    "%arg. Estimated output: %arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$arg. Estimated output: %2$arg"
+          }
+        }
+      }
+    },
+    "1 local draft is nearing expiration. Open TwainBridge to retry, save, or discard." : {
+
+    },
+    "A copy was saved successfully." : {
+
+    },
+    "A custom file field pattern must identify each document with {index} or {document_id}." : {
+
+    },
+    "A document exceeds this destination’s page limit." : {
+
+    },
+    "A document-scoped URL placeholder is ambiguous for a one-request multi-document batch." : {
+
+    },
+    "A document_id URL placeholder is ambiguous for a one-request multi-document batch." : {
+
+    },
+    "A generated document exceeds the destination’s file-size limit." : {
+
+    },
+    "A parameter has an invalid or empty name." : {
+
+    },
+    "A retained page could not be decoded. The draft remains safe." : {
+
+    },
+    "A scanned document is ready to review." : {
+
+    },
+    "A4" : {
+
+    },
+    "A5" : {
+
+    },
+    "About 60% dimensions, 55% image quality" : {
+
+    },
+    "About 80% dimensions, 72% image quality" : {
+
+    },
+    "Accept JPEG" : {
+
+    },
+    "Accept PDF" : {
+
+    },
+    "Acquiring" : {
+
+    },
+    "Actionable drafts" : {
+
+    },
+    "Actual Size" : {
+
+    },
+    "Add Command, Option, or Control to the scan shortcut." : {
+
+    },
+    "Add Pages" : {
+
+    },
+    "Add Parameter" : {
+
+    },
+    "Add at least one allowed value for ‘%arg’." : {
+
+    },
+    "Add destination" : {
+
+    },
+    "Add pages" : {
+
+    },
+    "Allow Notifications" : {
+
+    },
+    "Allow missing optional response fields" : {
+
+    },
+    "Allowed redirect hosts" : {
+
+    },
+    "Allowed values, comma separated" : {
+
+    },
+    "An interrupted transfer is preserved and requires a manual retry decision." : {
+
+    },
+    "Ask" : {
+
+    },
+    "Authentication" : {
+
+    },
+    "Authentication failed with HTTP %arg." : {
+
+    },
+    "Authorization must be configured in Authentication." : {
+
+    },
+    "Automatic" : {
+
+    },
+    "Automatic / Full Area" : {
+
+    },
+    "Automatic retry is disabled because the receiver does not guarantee idempotency." : {
+
+    },
+    "Available placeholders: {document_id}, {batch_id}, {index}, {name}, and {date}. Oversized output always asks before compression or lower-resolution rescan." : {
+
+    },
+    "Back" : {
+
+    },
+    "Background behavior" : {
+
+    },
+    "Balanced" : {
+
+    },
+    "Balanced: about %arg, %arg. Smaller File: about %arg, %arg. Encrypted source pages remain unchanged." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Balanced: about %1$arg, %2$arg. Smaller File: about %3$arg, %4$arg. Encrypted source pages remain unchanged."
+          }
+        }
+      }
+    },
+    "Bearer Token" : {
+
+    },
+    "Black & White" : {
+
+    },
+    "Body encoding" : {
+
+    },
+    "Built-in value" : {
+
+    },
+    "Business Card" : {
+
+    },
+    "Bytes" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Next page" : {
+
+    },
+    "Previous page" : {
+
+    },
+    "Return to the focused send view" : {
+
+    },
+    "Simple View" : {
+
+    },
+    "The destination rejected authentication. Open Advanced to update its credential." : {
+
+    },
+    "Captured pages are not secured yet" : {
+
+    },
+    "Change Host and Send" : {
+
+    },
+    "Change upload destination host?" : {
+
+    },
+    "Check Now" : {
+
+    },
+    "Check automatically" : {
+
+    },
+    "Check its power and connection, then continue scanning." : {
+
+    },
+    "Check the scanner display and paper path, then try again." : {
+
+    },
+    "Checking…" : {
+
+    },
+    "Choose Folder…" : {
+
+    },
+    "Choose a built-in value for ‘%arg’." : {
+
+    },
+    "Choose a file directly inside the configured watched folder. Monitoring is non-recursive." : {
+
+    },
+    "Choose a folder to resume." : {
+
+    },
+    "Choose a setting reported by the selected source and try again." : {
+
+    },
+    "Choose a supported key for the scan shortcut." : {
+
+    },
+    "Choose an allowed value for %arg." : {
+
+    },
+    "Choose another source, page size, or resolution and try again." : {
+
+    },
+    "Choose or create an upload destination." : {
+
+    },
+    "Choose the resulting quality explicitly. Compression changes only the generated copy; encrypted source pages remain unchanged." : {
+
+    },
+    "Choose the resulting quality explicitly. Encrypted source pages remain unchanged." : {
+
+    },
+    "Choose…" : {
+
+    },
+    "Clear History" : {
+
+    },
+    "Clear Temporary Documents…" : {
+
+    },
+    "Clear the paper path, reload the remaining pages, then continue." : {
+
+    },
+    "Close it securely, then continue scanning." : {
+
+    },
+    "Color" : {
+
+    },
+    "Command" : {
+
+    },
+    "Communication with the scanner was lost." : {
+
+    },
+    "Complete Batch…" : {
+
+    },
+    "Completed pages are encrypted immediately and remain local until you press Send. TwainBridge never uploads automatically and never modifies watched-folder source files." : {
+
+    },
+    "Completed pages are still in private staging and have not been discarded." : {
+
+    },
+    "Compress Copy — Balanced" : {
+
+    },
+    "Compress Copy — Smaller File" : {
+
+    },
+    "Compression" : {
+
+    },
+    "Configure URL query values as named Query parameters so they can be validated and sanitized." : {
+
+    },
+    "Configure Upload Destination…" : {
+
+    },
+    "Confirmed" : {
+
+    },
+    "Connect a scanner to configure its defaults." : {
+
+    },
+    "Connect a supported USB or network scanner." : {
+
+    },
+    "Connect or select a scanner, then use the shortcut again." : {
+
+    },
+    "Connect the scanner by USB or ensure it is reachable on the network. You may continue and configure it later." : {
+
+    },
+    "Connection accepted." : {
+
+    },
+    "Connection succeeded." : {
+
+    },
+    "Continue" : {
+
+    },
+    "Continue Scanning" : {
+
+    },
+    "Control" : {
+
+    },
+    "Copy" : {
+
+    },
+    "Copy Sanitized Diagnostic Summary" : {
+
+    },
+    "Copy of %arg" : {
+
+    },
+    "Create an HTTPS destination to enable Send." : {
+
+    },
+    "Create an HTTPS profile, enter its Keychain credential, and run Test Connection. The test does not send a real scan." : {
+
+    },
+    "Credential" : {
+
+    },
+    "Credentials cannot be embedded in the destination URL." : {
+
+    },
+    "Current shortcut" : {
+
+    },
+    "Custom Header" : {
+
+    },
+    "Custom JSON" : {
+
+    },
+    "Custom JSON requires a success path." : {
+
+    },
+    "Custom field per document" : {
+
+    },
+    "DOCUMENTS" : {
+
+    },
+    "Data type" : {
+
+    },
+    "Default destination" : {
+
+    },
+    "Default scanner" : {
+
+    },
+    "Default scanner and scan settings" : {
+
+    },
+    "Default value" : {
+
+    },
+    "Default value: %arg" : {
+
+    },
+    "Delete Page" : {
+
+    },
+    "Delete Parameter" : {
+
+    },
+    "Delete destination" : {
+
+    },
+    "Delete page" : {
+
+    },
+    "Delete parameter" : {
+
+    },
+    "Delete this page?" : {
+
+    },
+    "Destination" : {
+
+    },
+    "Destination actions" : {
+
+    },
+    "Destination host: %arg" : {
+
+    },
+    "Destination saved. Run Test Connection before sending documents." : {
+
+    },
+    "Destination secrets are stored in Keychain" : {
+
+    },
+    "Destination storage is unavailable." : {
+
+    },
+    "Destinations" : {
+
+    },
+    "Detected scanners" : {
+
+    },
+    "Diagnostics" : {
+
+    },
+    "Disabled" : {
+
+    },
+    "Discard" : {
+
+    },
+    "Discard Draft" : {
+
+    },
+    "Discard Test Scan" : {
+
+    },
+    "Discard this entire draft?" : {
+
+    },
+    "Discard…" : {
+
+    },
+    "Display name" : {
+
+    },
+    "Do Not Retry This Request" : {
+
+    },
+    "Document %arg · %arg page%arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Document %1$arg · %2$arg page%3$arg"
+          }
+        }
+      }
+    },
+    "Document %arg, %arg, %arg page%arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Document %1$arg, %2$arg, %3$arg page%4$arg"
+          }
+        }
+      }
+    },
+    "Document %arg, %arg, %arg pages" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Document %1$arg, %2$arg, %3$arg pages"
+          }
+        }
+      }
+    },
+    "Document %arg, %arg, 1 page" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Document %1$arg, %2$arg, 1 page"
+          }
+        }
+      }
+    },
+    "Document Feeder" : {
+
+    },
+    "Document defaults" : {
+
+    },
+    "Document identifier JSON path" : {
+
+    },
+    "Document name" : {
+
+    },
+    "Document order is significant" : {
+
+    },
+    "Document ready" : {
+
+    },
+    "Document-scoped values in a one-request batch must use the form location so they can be placed in the manifest." : {
+
+    },
+    "Documents & pages" : {
+
+    },
+    "Documents array JSON path" : {
+
+    },
+    "Documents per send" : {
+
+    },
+    "Download & Verify" : {
+
+    },
+    "Downloading… %arg%%" : {
+
+    },
+    "Draft limit reached" : {
+
+    },
+    "Draft limit reached — send, save, or discard a draft before scanning" : {
+
+    },
+    "Draft limit reached; watched-folder intake is paused." : {
+
+    },
+    "Draft manifest version %arg is not supported." : {
+
+    },
+    "Draft retention warning" : {
+
+    },
+    "Draft storage could not start: %arg" : {
+
+    },
+    "Draft storage is unavailable." : {
+
+    },
+    "Drafts" : {
+
+    },
+    "Drafts and watched-folder imports remain available." : {
+
+    },
+    "Duplex" : {
+
+    },
+    "Enable %arg" : {
+
+    },
+    "Enable global scan shortcut" : {
+
+    },
+    "Enable parameter" : {
+
+    },
+    "Encrypted drafts recover after a restart" : {
+
+    },
+    "Encrypted local scan payloads will be removed. Active uploads are not deleted." : {
+
+    },
+    "Enter %arg." : {
+
+    },
+    "Enter a Keychain value for required parameter ‘%arg’." : {
+
+    },
+    "Enter a complete destination URL." : {
+
+    },
+    "Enter a custom multipart file field pattern." : {
+
+    },
+    "Enter a filename pattern." : {
+
+    },
+    "Enter a valid manifest field name." : {
+
+    },
+    "Enter a valid multipart file field name." : {
+
+    },
+    "Enter the destination credential and store it in Keychain." : {
+
+    },
+    "Epson ICA driver not found" : {
+
+    },
+    "Estimated output: %arg" : {
+
+    },
+    "Estimated source size: %arg" : {
+
+    },
+    "Expected Content-Type" : {
+
+    },
+    "Export JSON…" : {
+
+    },
+    "Export Profile…" : {
+
+    },
+    "Export Scan Profile…" : {
+
+    },
+    "Extra scanned pages" : {
+
+    },
+    "Failed" : {
+
+    },
+    "File field" : {
+
+    },
+    "File field pattern" : {
+
+    },
+    "File fields" : {
+
+    },
+    "Filename pattern" : {
+
+    },
+    "Finish" : {
+
+    },
+    "Fit Page" : {
+
+    },
+    "Fit Width" : {
+
+    },
+    "Flatbed" : {
+
+    },
+    "Folder" : {
+
+    },
+    "Form field ‘%arg’ is reserved by the multipart document mapping." : {
+
+    },
+    "Form fields" : {
+
+    },
+    "Free disk space and check folder permissions before trying again." : {
+
+    },
+    "From" : {
+
+    },
+    "General" : {
+
+    },
+    "Global scan shortcut" : {
+
+    },
+    "Global shortcut unavailable" : {
+
+    },
+    "Global shortcut: %arg" : {
+
+    },
+    "Grayscale" : {
+
+    },
+    "HTTP %arg · %arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "HTTP %1$arg · %2$arg"
+          }
+        }
+      }
+    },
+    "HTTP method" : {
+
+    },
+    "Destination URL" : {
+
+    },
+    "Header name" : {
+
+    },
+    "Header ‘%arg’ contains a line break or control character." : {
+
+    },
+    "Header ‘%arg’ has an invalid name." : {
+
+    },
+    "Header ‘%arg’ is already used by Authentication." : {
+
+    },
+    "Header ‘%arg’ is managed by TwainBridge for idempotency." : {
+
+    },
+    "Header ‘%arg’ is reserved by HTTP." : {
+
+    },
+    "Headers" : {
+
+    },
+    "Help text" : {
+
+    },
+    "History contains no scan payloads, thumbnails, filenames, credentials, metadata values, query strings, or response bodies." : {
+
+    },
+    "Idempotency header" : {
+
+    },
+    "Import File Again…" : {
+
+    },
+    "Import Profile…" : {
+
+    },
+    "Import Scan Profile…" : {
+
+    },
+    "Import stable scanner files automatically" : {
+
+    },
+    "Importing…" : {
+
+    },
+    "Include JSON manifest" : {
+
+    },
+    "Include generated test PDF" : {
+
+    },
+    "Indexed field names" : {
+
+    },
+    "Interrupted" : {
+
+    },
+    "Interrupted scan recovery" : {
+
+    },
+    "Invalid URL" : {
+
+    },
+    "It will be removed %arg unless you retry, save a copy, or discard it." : {
+
+    },
+    "JPEG" : {
+
+    },
+    "JPEG output supports exactly one page." : {
+
+    },
+    "Keep App Open" : {
+
+    },
+    "Keep Pages" : {
+
+    },
+    "Keep TwainBridge open and retry after checking disk space and permissions. Quitting now may lose pages from the active scan." : {
+
+    },
+    "Keep metadata-only transfer history" : {
+
+    },
+    "Keep only failed documents" : {
+
+    },
+    "Keep the captured pages and finish editing" : {
+
+    },
+    "Keep the complete batch" : {
+
+    },
+    "Keep, continue, or discard the interrupted scan before starting another one." : {
+
+    },
+    "Key" : {
+
+    },
+    "Keychain error %arg." : {
+
+    },
+    "Keychain returned data in an unexpected format." : {
+
+    },
+    "Keychain value" : {
+
+    },
+    "Landscape" : {
+
+    },
+    "Last transfer" : {
+
+    },
+    "Launch TwainBridge at login" : {
+
+    },
+    "Launch at login" : {
+
+    },
+    "Limit" : {
+
+    },
+    "Load the remaining pages, then continue scanning." : {
+
+    },
+    "Local drafts" : {
+
+    },
+    "Location" : {
+
+    },
+    "Looking for scanners…" : {
+
+    },
+    "Manifest field" : {
+
+    },
+    "Maximum" : {
+
+    },
+    "Maximum batch size must be positive." : {
+
+    },
+    "Maximum documents must be between 1 and 20." : {
+
+    },
+    "Maximum documents: %arg" : {
+
+    },
+    "Maximum file size must be positive." : {
+
+    },
+    "Maximum length" : {
+
+    },
+    "Maximum length for ‘%arg’ must be positive." : {
+
+    },
+    "Maximum pages must be positive." : {
+
+    },
+    "Maximum response size must be between 0 and 10 MB." : {
+
+    },
+    "Maximum response: %arg" : {
+
+    },
+    "Message JSON path" : {
+
+    },
+    "Minimum" : {
+
+    },
+    "Mode" : {
+
+    },
+    "Move Down" : {
+
+    },
+    "Move Up" : {
+
+    },
+    "Move parameter down" : {
+
+    },
+    "Move parameter up" : {
+
+    },
+    "Multiple documents" : {
+
+    },
+    "Multiple pages" : {
+
+    },
+    "Needs Information" : {
+
+    },
+    "Network" : {
+
+    },
+    "New Destination" : {
+
+    },
+    "New destination filename pattern" : {
+
+    },
+    "New document" : {
+
+    },
+    "No Destination" : {
+
+    },
+    "No Drafts" : {
+
+    },
+    "No Page Selected" : {
+
+    },
+    "No Scanner" : {
+
+    },
+    "No Scanner Detected" : {
+
+    },
+    "No destination configured" : {
+
+    },
+    "No recent transfers" : {
+
+    },
+    "No scanner detected" : {
+
+    },
+    "No scanner found" : {
+
+    },
+    "No scanners detected" : {
+
+    },
+    "No unsent document is available to save. Create a new copy first if this batch was already sent." : {
+
+    },
+    "None" : {
+
+    },
+    "Not Now" : {
+
+    },
+    "Not checked" : {
+
+    },
+    "Not confirmed" : {
+
+    },
+    "Not rotated" : {
+
+    },
+    "Notifications omit filenames and metadata" : {
+
+    },
+    "OK" : {
+
+    },
+    "Offline — destination testing will be available when the network returns" : {
+
+    },
+    "Offline — drafts remain local" : {
+
+    },
+    "One document" : {
+
+    },
+    "One multipart request" : {
+
+    },
+    "One request per document" : {
+
+    },
+    "Only POST is enabled in this release." : {
+
+    },
+    "Only the JSON shown below will be exported." : {
+
+    },
+    "Open Current Document" : {
+
+    },
+    "Open Destination Settings" : {
+
+    },
+    "Open Destination Settings…" : {
+
+    },
+    "Open Epson DS-1660W Support" : {
+
+    },
+    "Open Privacy & Security" : {
+
+    },
+    "Open URL JSON path" : {
+
+    },
+    "Open Verified Update" : {
+
+    },
+    "Open and Remember This Host" : {
+
+    },
+    "Open another draft" : {
+
+    },
+    "Open in Browser" : {
+
+    },
+    "Open the receiver page in your browser?" : {
+
+    },
+    "Open verified result in browser after send" : {
+
+    },
+    "Opening scanner…" : {
+
+    },
+    "Option" : {
+
+    },
+    "Orientation" : {
+
+    },
+    "Original Quality" : {
+
+    },
+    "Output" : {
+
+    },
+    "Output exceeds the destination limit" : {
+
+    },
+    "Output format" : {
+
+    },
+    "PAGES" : {
+
+    },
+    "PDF" : {
+
+    },
+    "PDF and image quality" : {
+
+    },
+    "PDF, JPEG, PNG, and TIFF files are copied into encrypted drafts only after remaining unchanged across two checks. Source files are never modified or deleted." : {
+
+    },
+    "PDF, JPEG, PNG, and TIFF files are copied into encrypted drafts only after remaining unchanged across two checks. Source files are never modified or deleted. Use Import File Again for an intentional duplicate." : {
+
+    },
+    "Page %arg" : {
+
+    },
+    "Page %arg of %arg" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Page %1$arg of %2$arg"
+          }
+        }
+      }
+    },
+    "Page Size" : {
+
+    },
+    "Page size" : {
+
+    },
+    "Pages already captured remain available to keep or continue." : {
+
+    },
+    "Pages per document" : {
+
+    },
+    "Paper is jammed in the scanner." : {
+
+    },
+    "Parameter name" : {
+
+    },
+    "Parameter ‘%arg’ has an invalid name." : {
+
+    },
+    "Parameter ‘%arg’ is duplicated in %arg." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Parameter ‘%1$arg’ is duplicated in %2$arg."
+          }
+        }
+      }
+    },
+    "Partial success" : {
+
+    },
+    "Partially Sent" : {
+
+    },
+    "Permission to the watched folder was lost. Choose the folder again to resume." : {
+
+    },
+    "Permit empty response" : {
+
+    },
+    "Portrait" : {
+
+    },
+    "Posting parameters" : {
+
+    },
+    "Preparing" : {
+
+    },
+    "Preparing output…" : {
+
+    },
+    "Preparing source…" : {
+
+    },
+    "Privacy" : {
+
+    },
+    "Privacy-preserving notifications" : {
+
+    },
+    "Queued" : {
+
+    },
+    "Quit" : {
+
+    },
+    "Quit & Preserve Work" : {
+
+    },
+    "Quit Anyway" : {
+
+    },
+    "Quit while work is active?" : {
+
+    },
+    "Ready" : {
+
+    },
+    "Receiver supports idempotency" : {
+
+    },
+    "Recent transfers" : {
+
+    },
+    "Reconnect it, then continue scanning; pages already captured remain safe." : {
+
+    },
+    "Recovered Scan" : {
+
+    },
+    "Redirect allowlist entries must be hostnames without a scheme, path, port, or credentials." : {
+
+    },
+    "Redirects and open URLs are restricted to the destination host and this comma-separated allowlist." : {
+
+    },
+    "Reject" : {
+
+    },
+    "Remember for this destination" : {
+
+    },
+    "Remember in encrypted draft" : {
+
+    },
+    "Remote ID JSON path" : {
+
+    },
+    "Remove" : {
+
+    },
+    "Remove Document" : {
+
+    },
+    "Remove Drafts" : {
+
+    },
+    "Remove all local drafts?" : {
+
+    },
+    "Remove document" : {
+
+    },
+    "Remove this document?" : {
+
+    },
+    "Repeat field name" : {
+
+    },
+    "Request Notification Permission" : {
+
+    },
+    "Request concurrency" : {
+
+    },
+    "Request mode" : {
+
+    },
+    "Request timeout must be between 1 and 600 seconds." : {
+
+    },
+    "Required" : {
+
+    },
+    "Rescan" : {
+
+    },
+    "Rescan at Lower Resolution…" : {
+
+    },
+    "Reset to ⌥⌘S" : {
+
+    },
+    "Resolution" : {
+
+    },
+    "Resolved source" : {
+
+    },
+    "Response" : {
+
+    },
+    "Retain actionable drafts for %arg hours" : {
+
+    },
+    "Retry" : {
+
+    },
+    "Retry %arg in %arg seconds" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Retry %1$arg in %2$arg seconds"
+          }
+        }
+      }
+    },
+    "Retry Securing Captured Pages" : {
+
+    },
+    "Retry Upload" : {
+
+    },
+    "Retry an unconfirmed transfer?" : {
+
+    },
+    "Review & Export Support Bundle…" : {
+
+    },
+    "Review Privacy & Security and the scanner’s network credentials." : {
+
+    },
+    "Review Support Bundle" : {
+
+    },
+    "Rotate left" : {
+
+    },
+    "Rotate right" : {
+
+    },
+    "Rotated %arg degrees" : {
+
+    },
+    "Run Optional Test Scan…" : {
+
+    },
+    "Run Retention Cleanup Now" : {
+
+    },
+    "Run Setup Assistant Again" : {
+
+    },
+    "Sanitized request preview" : {
+
+    },
+    "Sanitized support bundle preview" : {
+
+    },
+    "Save" : {
+
+    },
+    "Save Copy…" : {
+
+    },
+    "Save Here" : {
+
+    },
+    "Save Scanner Defaults" : {
+
+    },
+    "Scan" : {
+
+    },
+    "Scan %arg" : {
+
+    },
+    "Scan New Document" : {
+
+    },
+    "Scan Profile" : {
+
+    },
+    "Scan Setup" : {
+
+    },
+    "Scan a document or configure a watched folder to begin." : {
+
+    },
+    "Scan as New Document" : {
+
+    },
+    "Scan into a new document?" : {
+
+    },
+    "Scan profile imported for the selected scanner." : {
+
+    },
+    "Scan shortcut needs a scanner" : {
+
+    },
+    "Scanned page" : {
+
+    },
+    "Scanner" : {
+
+    },
+    "Scanner access was denied." : {
+
+    },
+    "Scanner and driver" : {
+
+    },
+    "Scanner is busy" : {
+
+    },
+    "Scanning" : {
+
+    },
+    "Scanning was cancelled." : {
+
+    },
+    "Scanning…" : {
+
+    },
+    "Scanning… %arg pages captured" : {
+
+    },
+    "Scope" : {
+
+    },
+    "Search Again" : {
+
+    },
+    "Secure the completed pages first" : {
+
+    },
+    "Select at least one accepted output format." : {
+
+    },
+    "Selected Document…" : {
+
+    },
+    "Send" : {
+
+    },
+    "Send Again as New Copy" : {
+
+    },
+    "Send All" : {
+
+    },
+    "Send, save, or discard a local draft before using the scan shortcut again." : {
+
+    },
+    "Send, save, or discard a local draft before using the scanner button again." : {
+
+    },
+    "Sends a generated one-page file named twainbridge-test.pdf; no scanned document is used." : {
+
+    },
+    "Sensitive" : {
+
+    },
+    "Sensitive parameter values must be stored in Keychain." : {
+
+    },
+    "Sensitive values cannot be placed in the URL query." : {
+
+    },
+    "Sensitive values cannot be placed in the destination URL." : {
+
+    },
+    "Sent" : {
+
+    },
+    "Separate and fan the pages, then continue scanning." : {
+
+    },
+    "Sequential" : {
+
+    },
+    "Server returned HTTP %arg." : {
+
+    },
+    "Set Up TwainBridge" : {
+
+    },
+    "Set as Default" : {
+
+    },
+    "Settings…" : {
+
+    },
+    "Setup incomplete — open Settings for required actions" : {
+
+    },
+    "Shift" : {
+
+    },
+    "Sides" : {
+
+    },
+    "Single page" : {
+
+    },
+    "Single-sided" : {
+
+    },
+    "Size Options…" : {
+
+    },
+    "Smaller File" : {
+
+    },
+    "Some documents remain ready to retry." : {
+
+    },
+    "Some documents were sent; the remaining documents are still available." : {
+
+    },
+    "Source" : {
+
+    },
+    "Split and Send" : {
+
+    },
+    "Split pages into separate documents?" : {
+
+    },
+    "Standard TwainBridge JSON" : {
+
+    },
+    "Start a new document" : {
+
+    },
+    "Status" : {
+
+    },
+    "Status only" : {
+
+    },
+    "Step %arg of 4" : {
+
+    },
+    "Storage is unavailable" : {
+
+    },
+    "Stored in macOS Keychain; never included in profile exports." : {
+
+    },
+    "Success JSON path" : {
+
+    },
+    "Success status" : {
+
+    },
+    "Symbolic links are not imported. Choose the original file directly inside the watched folder." : {
+
+    },
+    "TLS validation failed. The certificate was not bypassed." : {
+
+    },
+    "Test Connection" : {
+
+    },
+    "Test Scan Complete" : {
+
+    },
+    "Test connection" : {
+
+    },
+    "Test this destination successfully before sending documents." : {
+
+    },
+    "Test this destination successfully before sending." : {
+
+    },
+    "Testing connection" : {
+
+    },
+    "That authentication header is reserved by HTTP." : {
+
+    },
+    "That shortcut is already used by another app. Choose a different combination." : {
+
+    },
+    "The %arg captured page%arg encrypted and safe on this Mac." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "The %1$arg captured page%2$arg encrypted and safe on this Mac."
+          }
+        }
+      }
+    },
+    "The 20-draft limit has been reached. Send, save, or discard a draft before scanning again." : {
+
+    },
+    "The 20-draft limit is reached. Send, save, or discard a draft before starting another scan." : {
+
+    },
+    "The HTTPS manifest is Ed25519-signed and the package hash is verified before it can be opened. Installation never starts while scanning or uploading." : {
+
+    },
+    "The URL placeholder ‘%arg’ does not match an enabled parameter." : {
+
+    },
+    "The URL placeholder ‘%arg’ has no value." : {
+
+    },
+    "The authentication header name is invalid." : {
+
+    },
+    "The batch exceeds this destination’s document limit." : {
+
+    },
+    "The batch response did not identify each document. No result was assumed." : {
+
+    },
+    "The batch response did not include a valid result for this document." : {
+
+    },
+    "The custom multipart file field pattern is invalid." : {
+
+    },
+    "The destination URL cannot contain a fragment." : {
+
+    },
+    "The destination URL contains an invalid placeholder." : {
+
+    },
+    "The destination URL contains invalid control characters." : {
+
+    },
+    "The destination URL is invalid or uses HTTP outside the local network." : {
+
+    },
+    "The destination URL is invalid." : {
+
+    },
+    "The destination could not be reached: %arg" : {
+
+    },
+    "The destination did not return an HTTP response." : {
+
+    },
+    "The destination does not accept %arg." : {
+
+    },
+    "The destination must use HTTPS, except for local-network endpoints." : {
+
+    },
+    "The destination profile could not be found." : {
+
+    },
+    "The destination profile is invalid: %arg" : {
+
+    },
+    "The destination query parameters are invalid." : {
+
+    },
+    "The destination rejected authentication. Update the Keychain credential and test the connection again." : {
+
+    },
+    "The destination response exceeded the configured %arg-byte limit." : {
+
+    },
+    "The document could not be found." : {
+
+    },
+    "The document feeder is empty." : {
+
+    },
+    "The document transfer was confirmed." : {
+
+    },
+    "The downloaded update failed signature-linked hash verification and was discarded." : {
+
+    },
+    "The draft could not be found." : {
+
+    },
+    "The draft encryption key is missing, but encrypted drafts still exist. TwainBridge will not replace the key or overwrite those drafts. Restore the original Keychain item, or recover the documents from their original scan source before clearing local drafts." : {
+
+    },
+    "The draft manifest exceeds the safe size limit." : {
+
+    },
+    "The encrypted draft manifest failed authentication." : {
+
+    },
+    "The encrypted draft manifest is invalid." : {
+
+    },
+    "The encrypted local copy will be removed. This cannot be undone." : {
+
+    },
+    "The encrypted page contains an invalid record." : {
+
+    },
+    "The encrypted page could not be verified or opened." : {
+
+    },
+    "The encrypted page failed authentication." : {
+
+    },
+    "The encrypted page header is invalid." : {
+
+    },
+    "The encrypted page is incomplete." : {
+
+    },
+    "The feeder detected more than one sheet." : {
+
+    },
+    "The file could not be imported safely. Its source was left untouched; check folder access and try again." : {
+
+    },
+    "The file could not be opened. The source file was left untouched." : {
+
+    },
+    "The file field pattern contains an unsupported placeholder." : {
+
+    },
+    "The file type is not supported. The source file was left untouched." : {
+
+    },
+    "The filename pattern contains an unsupported placeholder." : {
+
+    },
+    "The generated batch exceeds the destination’s total-size limit." : {
+
+    },
+    "The generated output exceeded a destination size limit. Choose Size Options, save a copy, or rescan at lower resolution." : {
+
+    },
+    "The generated test PDF could not be created." : {
+
+    },
+    "The global shortcut service could not start. Restart TwainBridge and try again." : {
+
+    },
+    "The idempotency header name is invalid." : {
+
+    },
+    "The local draft is safe and can be retried." : {
+
+    },
+    "The local draft is safe and ready to retry." : {
+
+    },
+    "The minimum for ‘%arg’ cannot exceed its maximum." : {
+
+    },
+    "The output file could not be created." : {
+
+    },
+    "The page could not be found." : {
+
+    },
+    "The pages were scanned but could not be secured locally." : {
+
+    },
+    "The previous attempt may have reached the receiver, and this destination does not declare idempotency support. Retrying can create a duplicate remote record." : {
+
+    },
+    "The receiver asked TwainBridge to retry in %arg seconds. Confirm to keep this draft paused and retry after that delay." : {
+
+    },
+    "The receiver rejected the request." : {
+
+    },
+    "The receiver requested a long retry delay" : {
+
+    },
+    "The receiver requested an automatic browser open for %arg. TwainBridge asks once before allowing automatic opens for each host." : {
+
+    },
+    "The response Content-Type did not match %arg." : {
+
+    },
+    "The response contained an invalid open URL." : {
+
+    },
+    "The response could not be confirmed." : {
+
+    },
+    "The response did not contain a Boolean success value." : {
+
+    },
+    "The response did not contain the configured ‘%arg’ field." : {
+
+    },
+    "The response exceeded the configured size limit." : {
+
+    },
+    "The response was not valid JSON." : {
+
+    },
+    "The scan shortcut could not be registered. Choose a different combination or restart TwainBridge." : {
+
+    },
+    "The scan stopped before it finished." : {
+
+    },
+    "The scanner could not complete the scan." : {
+
+    },
+    "The scanner cover is open." : {
+
+    },
+    "The scanner disconnected." : {
+
+    },
+    "The scanner is in use." : {
+
+    },
+    "The scanner rejected a selected setting." : {
+
+    },
+    "The scanner workflow succeeded. The test pages will now be securely removed and will not become a pending draft." : {
+
+    },
+    "The server requested a long retry delay, and the retry was not approved." : {
+
+    },
+    "The server requested a retry after %arg seconds. Automatic retry is paused; choose Send again when you are ready to continue." : {
+
+    },
+    "The server returned HTTP %arg." : {
+
+    },
+    "The server returned an empty response." : {
+
+    },
+    "The shortcut is active system-wide." : {
+
+    },
+    "The shortcut starts a new scan immediately with the selected scanner and its saved defaults. It does not require Accessibility permission." : {
+
+    },
+    "The signed update did not contain a valid HTTPS download URL." : {
+
+    },
+    "The single-page policy would create %arg outbound documents, exceeding the destination’s document limit." : {
+
+    },
+    "The success status-code range is invalid." : {
+
+    },
+    "The support bundle excludes scan content, thumbnails, filenames, folder paths, destination URLs, credentials, metadata values, query strings, and response bodies." : {
+
+    },
+    "The update feed returned HTTP %arg." : {
+
+    },
+    "The update manifest signature is invalid. No update was trusted." : {
+
+    },
+    "The update package could not be downloaded securely." : {
+
+    },
+    "The upload could not be confirmed. The draft remains safe." : {
+
+    },
+    "The validation expression for ‘%arg’ is invalid." : {
+
+    },
+    "The watched folder is unavailable. Reconnect the volume or choose the folder again." : {
+
+    },
+    "There is not enough free disk space to preserve this scan safely." : {
+
+    },
+    "This batch exceeds the destination’s document limit." : {
+
+    },
+    "This batch is estimated to exceed the destination’s total-size limit." : {
+
+    },
+    "This destination accepts one document per send." : {
+
+    },
+    "This destination accepts one page per document." : {
+
+    },
+    "This destination accepts one page per document. Each additional page will become a new document with its own document ID before sending." : {
+
+    },
+    "This destination accepts one page per document. The new scan can be added to this batch as a separate document." : {
+
+    },
+    "This destination does not accept %arg." : {
+
+    },
+    "This destination permits one page per document. Start a new document to scan another page; the existing page remains safe." : {
+
+    },
+    "This document has reached the destination’s %arg-page limit. Start a new document instead; the existing pages remain safe." : {
+
+    },
+    "This document was already confirmed by the receiver and is read-only. Create a new copy before changing it." : {
+
+    },
+    "This draft is nearing its retention limit." : {
+
+    },
+    "This draft was assigned to %arg. Sending to %arg creates a new logical batch ID to prevent cross-system idempotency collisions." : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "This draft was assigned to %1$arg. Sending to %2$arg creates a new logical batch ID to prevent cross-system idempotency collisions."
+          }
+        }
+      }
+    },
+    "This scanner cannot report feeder state reliably. Choose Flatbed or Document Feeder explicitly." : {
+
+    },
+    "This update requires a newer version of macOS." : {
+
+    },
+    "Timeout: %arg seconds" : {
+
+    },
+    "To" : {
+
+    },
+    "TwainBridge" : {
+
+    },
+    "TwainBridge could not prepare secure local storage." : {
+
+    },
+    "TwainBridge has no persistent Dock window. Close the workspace whenever you like; drafts remain encrypted and available from the menu bar." : {
+
+    },
+    "TwainBridge is up to date" : {
+
+    },
+    "TwainBridge will stop the active scan or upload and preserve recoverable work before quitting." : {
+
+    },
+    "Two at a time" : {
+
+    },
+    "Type" : {
+
+    },
+    "URL" : {
+
+    },
+    "URL placeholders are supported only in the path." : {
+
+    },
+    "US Legal" : {
+
+    },
+    "US Letter" : {
+
+    },
+    "Unknown location" : {
+
+    },
+    "Unknown storage error" : {
+
+    },
+    "Unsupported destination collection version." : {
+
+    },
+    "Untitled Document" : {
+
+    },
+    "Update feed is not configured in this build" : {
+
+    },
+    "Updates" : {
+
+    },
+    "Upload cancelled; draft preserved" : {
+
+    },
+    "Upload complete" : {
+
+    },
+    "Upload confirmed." : {
+
+    },
+    "Upload destination" : {
+
+    },
+    "Upload failed" : {
+
+    },
+    "Upload needs attention" : {
+
+    },
+    "Upload needs confirmation" : {
+
+    },
+    "Upload not confirmed" : {
+
+    },
+    "Uploading" : {
+
+    },
+    "Uploading %arg%%" : {
+
+    },
+    "Uploading documents…" : {
+
+    },
+    "Use Scan New Document again after the active acquisition finishes." : {
+
+    },
+    "Use the scan shortcut again after the active acquisition finishes." : {
+
+    },
+    "Use {index}, {document_id}, or {file_field}." : {
+
+    },
+    "User label" : {
+
+    },
+    "Validation" : {
+
+    },
+    "Validation expression" : {
+
+    },
+    "Value" : {
+
+    },
+    "Value source" : {
+
+    },
+    "Values marked sensitive are omitted." : {
+
+    },
+    "Version %arg is available" : {
+
+    },
+    "Version %arg is verified and ready" : {
+
+    },
+    "Wait and Retry" : {
+
+    },
+    "Wait for it to become ready, then try again." : {
+
+    },
+    "Wait for the other scan to finish, then try again." : {
+
+    },
+    "Waiting for Network" : {
+
+    },
+    "Waiting for network" : {
+
+    },
+    "Watched Folder" : {
+
+    },
+    "Watched folder" : {
+
+    },
+    "Watching" : {
+
+    },
+    "You may continue without a destination; Send remains disabled until setup and testing are complete." : {
+
+    },
+    "Your scans stay on this Mac" : {
+
+    },
+    "Zoom" : {
+
+    },
+    "Zoom in" : {
+
+    },
+    "Zoom out" : {
+
+    },
+    "https://example.com/api/scans or http://localhost:9080/upload" : {
+
+    },
+    "macOS did not authorize scanner access." : {
+
+    },
+    "through" : {
+
+    },
+    "· %arg" : {
+
+    }
+  },
+  "version" : "1.2"
+}

@@ -1,0 +1,61 @@
+# TwainBridge implementation status
+
+This file maps PRD Draft 5 acceptance criteria to the current implementation. It distinguishes code completion from release evidence that requires physical hardware, external infrastructure, or distribution credentials.
+
+## Current build evidence
+
+- Native SwiftUI/AppKit menu-bar application targeting macOS 15 or later.
+- Universal `arm64` and `x86_64` Release bundle verified with a macOS 15 deployment target, `LSUIElement`, and compiled `AppIcon.icns`/asset catalog.
+- The Release executable stays below 150 MiB process RSS after three seconds and completes a five-second stability smoke test. AppKit does not construct the SwiftUI scene while the development Mac is locked, so visual readiness still needs an unlocked-session confirmation.
+- The 81-test automated suite covers scanner capability models, independent scanner/webcam global-hotkey formatting, validation and persistence, encrypted library migration/retention/export, encrypted storage and permissions, crash recovery with corrupt-partial-page rejection, output assembly, selected-document export, 100-page PDF output, 100 MiB multipart streaming, destination validation/composition including private-LAN HTTP policy, request-ID consistency, response interpretation, retry policy, watched folders including corrupt-file and symlink rejection, draft limits, overflow-safe disk headroom, update signatures, privacy boundaries, and lifecycle services.
+- `Scripts/preflight.sh` regenerates the project, compiles and directly runs the XCTest bundle in headless or locked sessions, produces a universal Release build, checks deployment/status-bar/icon/ImageCaptureCore/AVFoundation/Carbon and camera-privacy metadata, and runs a five-second process smoke test.
+- Every app target build atomically increments `Config/BuildNumber.txt` and stamps both bundle version fields as `1.0.B`; preflight rejects a stale or mismatched stamp.
+- The local reference receiver covers normal success, partial success, planned retry, application rejection, malformed/oversized/empty responses, status-only mode, and slow responses. Its repeatable smoke test validates health, success, 503/503/200 idempotent retry, partial results, malformed/rejected responses, hashes, and metadata-only state during every preflight.
+
+## Acceptance criteria
+
+| # | Implementation | Verification status |
+|---:|---|---|
+| 1 | Guided onboarding includes driver/scanner discovery, optional test scan, destination setup/test, notifications, launch at login, and recoverable empty/offline states. | Code complete; clean-machine and physical-scanner walkthrough remain in the matrix. |
+| 2 | `MenuBarExtra`, `LSUIElement`, launch-at-login service, actionable counters, workspace and settings windows. | Implemented; signed clean-install login launch remains a release test. |
+| 3 | ImageCaptureCore/ICA and nonrecursive watched-folder providers only. | Implemented and source-audited. |
+| 4 | Per-scan scanner, source, sides, color, resolution, page size, and orientation controls. | Implemented; capability model tests pass. |
+| 5 | Source-specific ICA capability probing; flatbed disables duplex; feeder controls use feeder capabilities. | Implemented; model tests pass; device truthfulness needs the physical matrix. |
+| 6 | ICA flatbed/ADF, simplex/duplex, progress and cancellation paths exist. | **External gate:** DS-1660W USB, infrastructure Wi-Fi, and Wi-Fi Direct matrix. |
+| 7 | Completed ICA pages are journaled in private staging, recovered after crash, and presented with Keep, Continue, and Discard. Actual driver-resolved settings are journaled and corrupt or partial image/PDF files are excluded. | Implemented and recovery-tested; jam/empty/disconnect hardware cases remain in the matrix. |
+| 8 | Stability sampling, fingerprints, source preservation, duplicate prevention/explicit reimport, bookmark recovery, PDF/JPEG/PNG/TIFF and multipage TIFF/PDF extraction. | Implemented and automated tests pass; unavailable-volume UI run remains. |
+| 9 | Concurrent acquisition is rejected while the scanner is busy; uploads do not block new drafts; foreground, hardware-button, and watched-folder entry paths enforce the 20-draft limit without deleting source/staging data or stealing active preview selection. | Implemented and tested. Appending to an existing draft remains allowed at the limit. |
+| 10 | Encrypted manifests restore state; acquiring/uploading states recover as interrupted/failed; orphan cleanup follows committed manifests. | Implemented and persistence/crash tests pass. |
+| 11 | The default focused workspace shows the document, minimal multipage navigation, blocking feedback, Advanced, and Send; Advanced restores document/page boundaries, settings, pan/zoom, destination, and estimated size. | Implemented; UI matrix remains. |
+| 12 | Rotate, drag reorder, delete with confirmation, add pages/documents, rescan, selected-document or complete-batch save copy, and discard. Confirmed documents are read-only in both UI and storage service. | Implemented and tested. |
+| 13 | Multi-page PDF and single-page JPEG retain dimensions/rotation/order and use safe unique names; generation and encryption are chunked. | Implemented; 100-page and output correctness tests pass. |
+| 14 | Estimated and actual generated-size limits block Send and offer explicit before-action balanced/smaller estimates, lower-resolution rescan, save copy, and cancel. | Implemented and classifier-tested. |
+| 15 | Multi-document drafts, boundaries, batch/document metadata, per-document state, and one Send All action. | Implemented; request composition tests pass. |
+| 16 | Page and batch policies, projected single-page splits, additional-page decisions before acquisition, limits, overflow behavior, formats, sizes, and destination-change revalidation. | Implemented and tested. |
+| 17 | HTTPS multipart profiles, path placeholders, repeated/indexed/custom per-document file fields, ordered typed parameters, response mapping, and Keychain authentication/secrets. Clearing or disabling authentication deletes obsolete credentials. | Implemented; schema/security tests pass. |
+| 18 | Versioned sanitized exports omit secrets and disable sending until retested; imports validate before mutation. | Implemented and tested. |
+| 19 | Test Connection categorizes success/authentication/response/TLS/server/unreachable and optionally sends only a generated `twainbridge-test.pdf`, never a scan. | Implemented; generated PDF validity tested. |
+| 20 | Standard JSON, status-only, custom JSON, application failure, partial and unconfirmed interpretation. | Implemented and tested. |
+| 21 | Single document, one multipart batch, and per-document requests; manifest and stable logical identifiers; sequential/two-at-a-time options. Every retry rebuilds its body so request header, form field, and configured request-ID values match that attempt. | Implemented and composition-tested; pilot receiver remains external. |
+| 22 | Unsent edits/retries keep IDs; confirmed Send Again duplicates encrypted content with new IDs; destination-host change rotates batch ID without making confirmed documents actionable. | Implemented and tested. |
+| 23 | Three idempotent retries (2/10/30 seconds), transient status/network policy, offline wait, `Retry-After` up to five minutes, and queued manual approval for longer delays. | Implemented and policy-tested; live network matrix remains. |
+| 24 | Cancellation preserves drafts; per-document confirmations persist immediately; interrupted idempotent operations recover, non-idempotent operations require an explicit decision. | Implemented; sleep/network-loss matrix remains. |
+| 25 | Per-document results persist before subsequent requests, confirmed documents are excluded from retries and edits, and Send Again creates a new copy. | Implemented and tested. |
+| 26 | AES-GCM chunked page files and encrypted manifests; `0700` private directories and `0600` private files; private crash staging; Keychain-only keys/secrets; key-loss detection; disk-headroom checks; commit-before-delete and orphan cleanup. | Implemented and security-tested. |
+| 27 | History/notifications/support bundles use metadata and sanitized categories only; exports omit secrets; no payloads, filenames, query strings, metadata values, credentials, or response bodies. | Implemented and redaction-tested. |
+| 28 | HTTPS/system trust, redirect hop/host policy, cross-host secret stripping, reserved transport fields, bounded responses, signed update/hash checks, and per-host `open_url` approval. | Implemented and boundary-tested; external proxy/TLS matrix remains. |
+| 29 | Native keyboard focus, primary shortcuts, VoiceOver labels/identifiers, coherent document/page status values, labeled zoom and parameter controls, semantic status text, and system colors. | Code complete; **external gate:** hands-on VoiceOver, keyboard-only, and Increased Contrast audit. The local automated UI session could not run while the Mac was locked. |
+| 30 | Universal release script, mandatory preflight, hardened-runtime verification, production update-feed/key validation, signing/notarization/stapling checks, and signed update feed. | **External gate:** Developer ID/notary credentials, production feed, clean Intel/Apple Silicon installs, and completed compatibility matrix. |
+| 31 | Optional system-wide scan shortcut uses Carbon hotkey registration without Accessibility permission; settings provide supported keys/modifiers, persistence, conflict feedback, reset/disable controls, and immediate scanning with saved defaults and existing safety guards. | Implemented and model/persistence-tested; live global invocation remains part of the unlocked UI matrix. |
+| 32 | Webcam capture supports built-in, USB, and Continuity cameras through AVFoundation, a live preview, explicit macOS permission handling, private recoverable staging, the existing encrypted draft/upload pipeline, and a separately configurable global shortcut. | Implemented and hotkey persistence-tested; live permission, preview, capture, and camera-disconnect behavior remain part of the physical UI matrix. |
+| 33 | Configure-once operation persists the last active destination, preferred destination on new drafts, successful/started scanner choices, webcam, output format, compression, preview preferences, connection-test choice, hotkeys, and destination-scoped reusable posting values. Sensitive reusable values remain Keychain-only and explicitly non-reusable fields stay ephemeral. | Implemented with migration-safe destination decoding and persistence tests; destructive and ambiguity-related safety confirmations intentionally remain non-persistent. |
+| 34 | Encrypted Document Library retains scanner, webcam, and watched-folder captures by default; supports source filtering, search, preview, workspace recall, confirmed-document export, resend with new IDs, storage totals, and explicit local removal independent of remote copies and metadata-only transfer history. Library items are excluded from draft/post-success cleanup, while opt-out batches retain the previous cleanup behavior. | Implemented with migration, source classification, persistent default, confirmed export, and retention tests; unlocked hands-on library UI and large-library responsiveness remain in the matrix. |
+
+## Remaining release gates
+
+1. Complete [the compatibility matrix](COMPATIBILITY_MATRIX.md) with a physical Epson WorkForce DS-1660W and the approved Epson ICA driver across supported connection modes and macOS builds.
+2. Complete the unlocked-session three-second AppKit visual-ready measurement and hands-on keyboard, VoiceOver, and Increased Contrast audit. Process RSS and five-second stability are enforced by preflight.
+3. Configure the Developer ID/notary Keychain profile and production signed update feed, then archive, notarize, staple, install, update, and launch at login on clean Apple Silicon and Intel systems.
+4. Validate the actual pilot web receiver and its authentication, request mapping, idempotency, partial-result, redirect, proxy, TLS, and size-limit behavior.
+
+Until those gates are signed off, the app is an implementation-complete release candidate—not a published compatibility claim.

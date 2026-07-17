@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Configure and manually test the TwainBridge demo upload endpoint.">
+  <title>Upload endpoint · TwainBridge</title>
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="TwainBridge Library home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>TwainBridge</strong><small>Demo receiver</small></span>
+    </a>
+    <div class="receiver-status online">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span><strong>Upload endpoint</strong><small>Configuration and manual test</small></span>
+    </div>
+    <a class="library-link" href="/">Open library <span aria-hidden="true">→</span></a>
+  </header>
+
+  <main class="endpoint-main">
+    <section class="endpoint-intro" aria-labelledby="endpointTitle">
+      <div>
+        <p class="eyebrow">POST /upload</p>
+        <h1 id="endpointTitle">Connect TwainBridge.</h1>
+        <p>This address accepts PDF, JPEG, and PNG documents as multipart form data. Use the settings below in TwainBridge, or send a file manually to verify the receiver.</p>
+      </div>
+      <button class="endpoint-address" id="copyUploadEndpoint" type="button" aria-label="Copy upload endpoint">
+        <span>Destination URL</span>
+        <code id="uploadEndpoint">http://localhost:9080/upload</code>
+        <strong id="copyLabel">Copy</strong>
+      </button>
+    </section>
+
+    <section class="setup-section" aria-labelledby="settingsTitle">
+      <div class="section-heading">
+        <p class="eyebrow">TwainBridge settings</p>
+        <h2 id="settingsTitle">Destination configuration</h2>
+        <p>The demo uses no authentication. Keep it on localhost or a trusted development LAN.</p>
+      </div>
+      <dl class="configuration-list">
+        <div><dt>Destination URL</dt><dd><code id="configurationEndpoint"></code></dd></div>
+        <div><dt>HTTP method</dt><dd>POST</dd></div>
+        <div><dt>Body encoding</dt><dd>multipart/form-data</dd></div>
+        <div><dt>File field</dt><dd><code>file</code></dd></div>
+        <div><dt>Files per request</dt><dd>One or more; repeated <code>file</code> fields</dd></div>
+        <div><dt>Batch strategy</dt><dd>One multipart request</dd></div>
+        <div><dt>Manifest</dt><dd>Enabled; field name <code>manifest</code></dd></div>
+        <div><dt>Response mapping</dt><dd>Standard JSON; accept HTTP 200–299</dd></div>
+        <div class="important-setting"><dt>Test Connection</dt><dd>Automatically sends <strong>twainbridge-test.pdf</strong></dd></div>
+      </dl>
+    </section>
+
+    <section class="contract-section" aria-labelledby="fieldsTitle">
+      <div class="section-heading">
+        <p class="eyebrow">Multipart contract</p>
+        <h2 id="fieldsTitle">Accepted fields</h2>
+        <p>File parts are stored. Recognized metadata is shown in the library; additional custom form fields are accepted but intentionally not retained by this demo.</p>
+      </div>
+      <div class="field-table-wrap">
+        <table class="field-table">
+          <thead><tr><th>Field</th><th>Use</th><th>Requirement</th></tr></thead>
+          <tbody>
+            <tr><td><code>file</code></td><td>PDF, JPEG, or PNG file. Repeat the field for multiple documents.</td><td><span class="required-tag">Required</span></td></tr>
+            <tr><td><code>batch_id</code></td><td>Stable logical ID shared by documents sent together.</td><td>Recommended</td></tr>
+            <tr><td><code>request_id</code></td><td>Unique ID for this HTTP attempt and diagnostics.</td><td>Recommended</td></tr>
+            <tr><td><code>document_id</code></td><td>Stable ID when the request contains one document.</td><td>Single file</td></tr>
+            <tr><td><code>page_count</code></td><td>Positive page count when the request contains one document.</td><td>Single file</td></tr>
+            <tr><td><code>document_index</code></td><td>Zero-based document order for per-document request mode.</td><td>Optional</td></tr>
+            <tr><td><code>manifest</code></td><td>JSON object with <code>batch_id</code> and a <code>documents</code> array matched to file parts by order.</td><td>Batch metadata</td></tr>
+            <tr><td><code>source</code> / <code>scanner_name</code></td><td>Human-readable capture source displayed in this demo library.</td><td>Optional</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <details class="manifest-example">
+        <summary>Manifest JSON example</summary>
+        <pre><code>{
+  "batch_id": "batch-2026-001",
+  "documents": [
+    {
+      "document_id": "document-001",
+      "filename": "signed-form.pdf",
+      "page_count": 2,
+      "scanned_at": "2026-07-17T21:30:00Z"
+    }
+  ]
+}</code></pre>
+      </details>
+    </section>
+
+    <section class="manual-section" aria-labelledby="manualTitle">
+      <div class="section-heading">
+        <p class="eyebrow">Browser test</p>
+        <h2 id="manualTitle">Manual upload</h2>
+        <p>Select one or more files. Only the files are required; metadata lets you test the same contract TwainBridge uses.</p>
+      </div>
+
+      <form id="manualUploadForm" class="upload-form">
+        <label class="file-drop" for="manualFiles">
+          <span class="file-symbol" aria-hidden="true">＋</span>
+          <strong>Choose PDF, JPEG, or PNG files</strong>
+          <span id="fileSelectionLabel">No files selected · 100 MB maximum per file</span>
+          <input id="manualFiles" name="file" type="file" accept="application/pdf,image/jpeg,image/png,.pdf,.jpg,.jpeg,.png" multiple required>
+        </label>
+
+        <div class="form-grid">
+          <label><span>Batch ID <small>recommended</small></span><input name="batch_id" id="batchId" type="text" placeholder="batch-2026-001"></label>
+          <label><span>Request ID <small>recommended</small></span><input name="request_id" type="text" placeholder="request-001"></label>
+          <label><span>Document ID <small>single file</small></span><input name="document_id" type="text" placeholder="document-001"></label>
+          <label><span>Page count <small>single file</small></span><input name="page_count" type="number" min="1" max="10000" placeholder="1"></label>
+          <label class="wide-field"><span>Source / scanner name <small>optional</small></span><input name="source" id="sourceName" type="text" placeholder="Epson DS-1660W feeder or Front desk webcam"></label>
+          <label class="wide-field"><span>Manifest JSON <small>optional for batches</small></span><textarea name="manifest" id="manifestInput" rows="9" placeholder='{"batch_id":"…","documents":[…]}'></textarea></label>
+        </div>
+
+        <div class="form-actions">
+          <button id="generateManifest" type="button">Generate manifest from files</button>
+          <span id="formHint">Files are sent directly to this local receiver.</span>
+          <button id="uploadButton" class="upload-primary" type="submit">Upload documents</button>
+        </div>
+      </form>
+
+      <section id="uploadResult" class="upload-result" aria-live="polite" hidden>
+        <div><p class="eyebrow" id="resultEyebrow">Receiver response</p><h3 id="resultTitle">Upload complete</h3><p id="resultMessage"></p></div>
+        <div class="result-actions"><a id="openUploadedDocument" href="#" hidden>View document</a><a href="/">Open library</a></div>
+        <pre><code id="resultJson"></code></pre>
+      </section>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/assets/upload.js" defer></script>
+</body>
+</html>

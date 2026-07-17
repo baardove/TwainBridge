@@ -1,0 +1,25 @@
+.DS_Store
+DerivedData/
+build/
+Config/Release.xcconfig
+.build/
+xcuserdata/
+*.xcuserstate
+__pycache__/
+*.pyc
+DemoReceiver/data/
+ReferenceReceiver/data/
+.playwright-cli/
+output/playwright/
+*.log
+
+# Local credentials, signing material, and private release configuration.
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.cer
+*.mobileprovision

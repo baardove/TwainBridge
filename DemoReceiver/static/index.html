@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="A local library for documents received from TwainBridge.">
+  <title>TwainBridge Library</title>
+  <link rel="stylesheet" href="/assets/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="TwainBridge Library home">
+      <span class="brand-mark" aria-hidden="true"><span></span></span>
+      <span><strong>TwainBridge</strong><small>Receiver library</small></span>
+    </a>
+    <div class="receiver-status">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span><strong id="connectionLabel">Connecting</strong><small id="librarySummary">Checking receiver…</small></span>
+    </div>
+    <button class="endpoint-button" id="copyEndpoint" type="button">
+      <span>Upload endpoint</span><code id="endpointLabel">/upload</code>
+    </button>
+  </header>
+
+  <main>
+    <section class="library-heading" aria-labelledby="pageTitle">
+      <div>
+        <p class="eyebrow">Local archive</p>
+        <h1 id="pageTitle">Documents, ready when you are.</h1>
+        <p>Scans and camera captures arrive here automatically. Open an item to inspect, download, or remove it.</p>
+      </div>
+      <div class="date-stamp" aria-hidden="true"><span id="dateDay"></span><small id="dateMonth"></small></div>
+    </section>
+
+    <section class="controls" aria-label="Library controls">
+      <label class="search-field">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <span class="sr-only">Search documents</span>
+        <input id="searchInput" type="search" placeholder="Search filename, source, or ID" autocomplete="off">
+      </label>
+      <div class="segmented" role="group" aria-label="Document type">
+        <button type="button" class="active" data-filter="all">All</button>
+        <button type="button" data-filter="image">Images</button>
+        <button type="button" data-filter="pdf">PDFs</button>
+      </div>
+      <label class="sort-field">Sort
+        <select id="sortSelect">
+          <option value="newest">Newest first</option>
+          <option value="oldest">Oldest first</option>
+          <option value="name">Filename</option>
+        </select>
+      </label>
+    </section>
+
+    <div id="errorBanner" class="error-banner" role="alert" hidden></div>
+    <section id="documentGrid" class="document-grid" aria-live="polite" aria-label="Received documents"></section>
+
+    <section id="emptyState" class="empty-state" hidden>
+      <span class="empty-sheet" aria-hidden="true"><i></i><i></i><i></i></span>
+      <p class="eyebrow">Waiting for an upload</p>
+      <h2>Your library is clear.</h2>
+      <p>Send a scan or camera capture to this endpoint:</p>
+      <button id="emptyEndpoint" type="button"><code></code><span>Copy</span></button>
+    </section>
+  </main>
+
+  <dialog id="viewer" class="viewer" aria-labelledby="viewerTitle">
+    <div class="viewer-shell">
+      <header class="viewer-header">
+        <div><p class="eyebrow" id="viewerKind">Document</p><h2 id="viewerTitle">Preview</h2></div>
+        <div class="viewer-nav">
+          <button id="previousDocument" type="button" aria-label="Previous document" title="Previous document (Left arrow)">←</button>
+          <span id="viewerPosition">1 / 1</span>
+          <button id="nextDocument" type="button" aria-label="Next document" title="Next document (Right arrow)">→</button>
+          <button id="closeViewer" class="close-button" type="button" aria-label="Close viewer" title="Close (Escape)">×</button>
+        </div>
+      </header>
+      <div class="viewer-body">
+        <section class="preview-stage" id="previewStage">
+          <img id="imagePreview" alt="" hidden>
+          <iframe id="pdfPreview" title="PDF preview" hidden></iframe>
+          <div id="imageTools" class="image-tools" hidden>
+            <button id="zoomOut" type="button" aria-label="Zoom out">−</button>
+            <button id="zoomReset" type="button">100%</button>
+            <button id="zoomIn" type="button" aria-label="Zoom in">+</button>
+          </div>
+        </section>
+        <aside class="document-details">
+          <div class="details-actions">
+            <a id="downloadDocument" class="primary-action" href="#" download>Download</a>
+            <a id="openDocument" href="#" target="_blank" rel="noopener">Open original ↗</a>
+          </div>
+          <dl>
+            <div><dt>Received</dt><dd id="detailReceived">—</dd></div>
+            <div><dt>Source</dt><dd id="detailSource">—</dd></div>
+            <div><dt>Pages</dt><dd id="detailPages">—</dd></div>
+            <div><dt>Size</dt><dd id="detailSize">—</dd></div>
+            <div><dt>Document ID</dt><dd id="detailId">—</dd></div>
+          </dl>
+          <button id="deleteDocument" class="delete-action" type="button">Remove from this library</button>
+        </aside>
+      </div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>
