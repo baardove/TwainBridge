@@ -231,6 +231,12 @@ For the Epson WorkForce DS-1660W pilot, install Epson Scan 2/the current Epson I
 
 ## Install and run
 
+### Download a prebuilt preview
+
+Download the latest development preview from [GitHub Releases](https://github.com/baardove/TwainBridge/releases). The prebuilt application is universal for Apple Silicon and Intel Macs and requires macOS 15 or later.
+
+The preview is Apple Development-signed but not Developer ID-notarized. macOS may therefore require you to Control-click the app, choose **Open**, and confirm the first launch. Treat it as a test build until the production signing and notarization gates in [Release status](#release-status) are complete.
+
 ### Build in Xcode
 
 ```sh
