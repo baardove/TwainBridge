@@ -234,7 +234,7 @@ For the Epson WorkForce DS-1660W pilot, install Epson Scan 2/the current Epson I
 ### Build in Xcode
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/baardove/TwainBridge.git
 cd TwainBridge
 xcodegen generate
 open TwainBridge.xcodeproj
